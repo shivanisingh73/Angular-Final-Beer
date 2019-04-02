@@ -1,0 +1,20 @@
+<div *ngFor="let ob of new_category">
+  <div *ngIf="ob['id']==id">
+      <h1>This Beer's Style</h1>
+      <h4 class="text">{{ob.beerstyle}}</h4>
+  </div>
+</div> 
+<div class="row">
+<div *ngFor="let object of new_details;">
+  <div *ngIf="object['cat_id']==id">
+
+    <div class="card column col-sm-12 col-md-5">
+      <img src={{object.image}} alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>{{object.company}}</b></h4>
+        <button type="submit" routerLink='/beer-features/{{object.company_id}}' class="learn_btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

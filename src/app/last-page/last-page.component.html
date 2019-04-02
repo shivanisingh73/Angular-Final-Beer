@@ -1,0 +1,134 @@
+<div *ngFor="let obj of new_details">
+  <div *ngIf="obj['company_id']==id">
+<div class="card">
+  <div class="row">
+    <div class="col-md-3">
+      <div>
+        <img class="Pic"
+          src="https://www.drinkpreneur.com/wp-content/uploads/2017/04/drinkpreneur_2016-01-26-1453821995-8643361-beermain.jpg">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row Details">
+        <p>Features</p>
+        <p>{{obj.features}}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="card">
+
+  <h4><b>Details</b></h4>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="glyph">
+          <i class="fa fa-line-chart" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <p>International Bitterness Units scale</p>
+      <p>{{obj.IBUS}}</p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="glyph">
+          <i class="fa fa-tint" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <p>Alcohol by Volume</p>
+      <p>{{obj.AV}}</p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="glyph">
+          <i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <p>Final Gravity</p>
+      <p>{{obj.FG}}</p>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-3">
+        <div class="glyph">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <p>Standard Reference Method</p>
+        <p>{{obj.SRM}}</p>
+        <hr>
+      </div>
+    </div>
+
+</div>
+
+<div class="card">
+
+    <h4><b>Brewery Info</b></h4>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="glyph">
+            <i class="fa fa-beer" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <p>Brewery Name</p>
+        <p>{{obj.BN}}</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="glyph">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <p>About</p>
+        <p>{{obj.About}}</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="glyph">
+            <i class="fa fa-html5" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <p>Website</p>
+        <p>{{obj.website}}</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+          <div class="glyph">
+              <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <p>Established</p>
+          <p>{{obj.established}}</p>
+          <hr>
+        </div>
+      </div>
+  
+  </div>
+</div>
+</div>
+<div class="space">
+ <span> <button type="button" routerLink="/cards" class="return_btn">RETURN TO BEER COMPANIES</button></span>
+ <span><button type="button" (click)="like()" class="return_btn">Like</button></span>
+</div>

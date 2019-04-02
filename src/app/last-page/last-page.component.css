@@ -1,0 +1,32 @@
+.Pic{
+    width: 100%;
+}
+.card{
+    margin-top: 1%;
+margin-left: 18%;
+border-style: outset;
+}
+.row Details{
+    word-wrap: break-word;
+}
+.row{
+    margin-left: 1%;
+    margin-right: 2%;
+}
+.card{
+    padding-left: 2%;
+    width: 65%;
+    
+}
+.fa{
+    font-size: 450%;
+}
+.return_btn{
+    width: 40%; 
+}
+.space{
+    padding-left: 17%;
+}
+.website{
+    word-wrap: break-word;
+}

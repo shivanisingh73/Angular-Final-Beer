@@ -1,0 +1,16 @@
+<h1>Wish List</h1>
+<div class="row">
+<div *ngFor="let i of array">
+  <div *ngFor="let obj of new_details">
+    <div *ngIf="obj.company_id==i">
+        <div class="card column col-sm-12 col-md-3">
+            <img src={{obj.image}} alt="Avatar" style="width:100%">
+            <div class="container">
+              <h5><b> {{obj.company}}</b></h5>
+              <button type="submit" id={{obj.company_id}} class="learn_btn" (click)="onClick($event)">Remove</button>
+            </div>
+          </div>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div>
+  <h1>Explore</h1>
+  <h4 class="text">There are so many great beers around the world. Sometimes it can be hard to keep track of all the different kinds!
+    Progressive Beer is a handy web app that is designed to help you learn everything there is to know about beers!
+    Explore the many beer styles in list below for more information.</h4>
+</div>
+<div class="row">
+<div *ngFor="let object of new_cat">
+  <div class="card column col-sm-12 col-md-5">
+    <img src={{object.image}} alt="Avatar" style="width:100%">
+    <div class="container">
+      <h5><b>{{object.category}}</b></h5>
+      <button type="submit" id={{object.id}} routerLink='/beer-details/{{object.id}}'
+        class="learn_btn">Learn More</button>
+    </div>
+  </div>
+</div>
+</div>

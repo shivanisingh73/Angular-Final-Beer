@@ -1,0 +1,108 @@
+<form [formGroup]="reactiveForm">
+
+  <div>
+    <label>AV:
+      <input type="text" formControlName="AV">
+    </label>
+    <div *ngIf="f.AV.errors" class="alert alert-danger">
+      <p *ngIf="f.AV.errors.required">!!Alcohol by Volume Required!!</p>
+      <p *ngIf="f.AV.errors.minlength ">!!Alcohol by Volume min value is 0!!</p>
+      <p *ngIf="f.AV.errors.maxlength ">!!Alcohol by Volume max value is 100!!</p>
+    </div>
+  </div>
+
+  <div>
+    <label>About:
+      <input type="text" fromControlName="about">
+    </label>
+  </div>
+
+
+  <div>
+    <label>Brewery Name:</label>
+      <input type="text" fromControlName="BN" >
+  </div>
+
+  <div>
+    <label>Final Gravity
+      <input type="text" formControlName="FG">
+    </label>
+    <div *ngIf="f.FG.errors" class="alert alert-danger">
+      <p *ngIf="f.FG.errors.required">!!Final Gravity Required!!</p>
+      <p *ngIf="f.FG.errors.minlength ">!!Final Gravity min value is 0!!</p>
+      <p *ngIf="f.FG.errors.maxlength ">!!Final Gravity max value is 100!!</p>
+    </div>
+  </div>
+
+
+  <div>
+    <label>International Bitterness Units scale:
+      <input type="text" formControlName="IBUS">
+    </label>
+    <div *ngIf="f.IBUS.errors" class="alert alert-danger">
+      <p *ngIf="f.IBUS.errors.required">!!International Bitterness Units scale Required!!</p>
+      <p *ngIf="f.IBUS.errors.minlength ">!!International Bitterness Units scale min value is 0</p>
+      <p *ngIf="f.IBUS.errors.maxlength ">!!International Bitterness Units scale max value is 100!!</p>
+    </div>
+  </div>
+
+  <div>
+    <label>SRM:
+      <input type="text" formControlName="SRM">
+    </label>
+    <div *ngIf="f.SRM.errors" class="alert alert-danger">
+      <p *ngIf="f.SRM.errors.required">!!Alcohol by Volume Required!!</p>
+      <p *ngIf="f.SRM.errors.minlength ">!!Alcohol by Volume min value is 0!!</p>
+      <p *ngIf="f.SRM.errors.maxlength ">!!Alcohol by Volume max value is 100!!</p>
+    </div>
+  </div>
+
+  <div>
+    <label>Beer Category
+      <select name="beer_style_list" formControlName="cat_id">
+        <option value="">Beer Style</option>
+        <option value="Classic English-Style Pale Ale">Classic English-Style Pale Ale</option>
+        <option value="Ordinary Bitter">Ordinary Bitter</option>
+        <option value="Scotch Ale">Scotch Ale</option>
+      </select>
+    </label>
+    <div *ngIf="f.cat_id.errors" class="alert alert-danger">
+      <p *ngIf="f.cat_id.errors.required">!!Beer Style Required!!</p>
+    </div>
+  </div>
+
+  <div>
+    <label>Beer Company:
+      <input type="text" formControlName="company">
+    </label>
+    <div *ngIf="f.company.errors" class="alert alert-danger">
+      <p *ngIf="f.company.errors.required">!!Beer Company Name Required!!</p>
+    </div>
+  </div>
+
+  <div>
+    <label>Established:
+      <input type="text" fromComtrolName="established">
+    </label>
+  </div>
+
+    <div>
+      <label>Features:
+        <input type="text" formControlName="features">
+      </label>
+      <div *ngIf="f.features.errors" class="alert alert-danger">
+        <p *ngIf="f.features.errors.required">!!Features Required!!</p>
+      </div>
+    </div>
+
+
+    <div>
+      <label>Website:
+        <input type="text" fromControlName="website">
+      </label>
+    </div>
+
+    <div>
+    <button type="button" (click)="onSubmit()">Add a Beer</button>
+  </div>
+</form>
